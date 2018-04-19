@@ -32,17 +32,13 @@ def OR(x1, x2):
     elif tmp > 0:
         return 1
 
-print (AND(0, 0))
-print (AND(0 ,1))
-print (AND(1, 0))
-print (AND(1, 1))
+def XOR(x1, x2):
+    y1 = NAND(x1, x2)
+    y2 = OR(x1, x2)
 
-print (NAND(0, 0))
-print (NAND(0 ,1))
-print (NAND(1, 0))
-print (NAND(1, 1))
+    return AND(y1, y2)
 
-print (OR(0, 0))
-print (OR(0 ,1))
-print (OR(1, 0))
-print (OR(1, 1))
+print (XOR(0, 0))
+print (XOR(0 ,1))
+print (XOR(1, 0))
+print (XOR(1, 1))
